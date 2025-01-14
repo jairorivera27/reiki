@@ -38,9 +38,9 @@
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="/calculadora">Calculadora</a></li>
+                <li><a href="/calculadora" class="active">Calculadora</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="./contacto.html" class="active">Contacto</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
             <div class="nav-buttons">
                 <button class="quote-button">Cotiza Ya</button>
@@ -76,6 +76,41 @@
         position: relative;
         z-index: 1;">
         <div class="container">
+            <div class="calculator-intro" style="text-align: center; margin-bottom: 3rem;">
+                <h1>¡Empieza a Ahorrar! Calcula tu Sistema Fotovoltaico</h1>
+                <p style="margin: 1rem 0;">En solo 5 minutos puedes calcular y cotizar gratis tu proyecto de energía solar a medida. Ten a la mano tu factura de servicio de electricidad energía y registra tu información.</p>
+                
+                <div class="steps" style="margin: 2rem 0;">
+                    <p style="margin-bottom: 1rem;">¿Cómo funciona?</p>
+                    <ol style="list-style: none;">
+                        <li>1. 💡 Dimensiona y cotiza tu sistema fotovoltaico alineado a tus necesidades de consumo.</li>
+                        <li>2. 📝 Ingresa detalles básicos como tu ubicación, estrato, consumo en kWh y el valor que pagas por energía al mes.</li>
+                        <li>3. ✨ ¡Y listo! Recibe los resultados y amplía la información solicitando asesoría de expertos.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Agregar el mapa -->
+            <div class="location-section" style="margin-bottom: 3rem;">
+                <label for="ubicacion">Ubicación* Ubícate en el mapa o describe tu ubicación en el campo buscar.</label>
+                <div class="map-container" style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                    <div style="display: flex; margin-bottom: 0.5rem;">
+                        <button style="padding: 0.5rem 1rem; margin-right: 0.5rem;">Mapa</button>
+                        <button style="padding: 0.5rem 1rem;">Satélite</button>
+                        <input type="text" placeholder="Buscar..." style="margin-left: auto; padding: 0.5rem; border-radius: 4px; border: 1px solid #ddd;">
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.51641071547!2d-75.6446706871094!3d6.244203800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1699901026614!5m2!1ses!2sco"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
             <div class="form-container" style="
                 max-width: 800px;
                 margin: 0 auto;
@@ -83,38 +118,20 @@
                 padding: 2rem;
                 border-radius: 15px;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                <form id="contactForm" style="display: grid; gap: 1.5rem;" onsubmit="enviarWhatsApp(event)">
+                <form id="calculadoraForm" style="display: grid; gap: 1.5rem;">
+                    <!-- Nombre y Correo -->
                     <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div>
-                            <label for="nombre">Nombre completo *</label>
-                            <input type="text" id="nombre" name="nombre" required style="
+                            <label for="nombre">Nombre*</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escriba aquí su nombre y apellidos" required style="
                                 width: 100%;
                                 padding: 0.8rem;
                                 border: 1px solid #ddd;
                                 border-radius: 8px;">
                         </div>
                         <div>
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" name="email" required style="
-                                width: 100%;
-                                padding: 0.8rem;
-                                border: 1px solid #ddd;
-                                border-radius: 8px;">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div>
-                            <label for="telefono">Teléfono *</label>
-                            <input type="tel" id="telefono" name="telefono" required style="
-                                width: 100%;
-                                padding: 0.8rem;
-                                border: 1px solid #ddd;
-                                border-radius: 8px;">
-                        </div>
-                        <div>
-                            <label for="ciudad">Ciudad *</label>
-                            <input type="text" id="ciudad" name="ciudad" required style="
+                            <label for="correo">Correo*</label>
+                            <input type="email" id="correo" name="correo" placeholder="correo@mail.com" required style="
                                 width: 100%;
                                 padding: 0.8rem;
                                 border: 1px solid #ddd;
@@ -122,27 +139,131 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required style="
-                            width: 100%;
-                            padding: 0.8rem;
-                            border: 1px solid #ddd;
-                            border-radius: 8px;
-                            resize: vertical;"></textarea>
+                    <!-- Teléfono y Tipo Usuario -->
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese número fijo o celular" style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                        </div>
+                        <div>
+                            <label for="tipoUsuario">Tipo Usuario*</label>
+                            <select id="tipoUsuario" name="tipoUsuario" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                                <option value="">Seleccione una opción</option>
+                                <option value="hogar">Hogar</option>
+                                <option value="empresa">Empresa</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="form-group" style="text-align: center;">
-                        <button type="submit" class="cta-button" style="
-                            background: #e0bd1a;
-                            color: #2c1d4a;
-                            border: none;
-                            padding: 1rem 3rem;
-                            border-radius: 25px;
-                            font-weight: bold;
-                            cursor: pointer;">
-                            Enviar mensaje
-                        </button>
+                    <!-- Estrato y Tipo de Techo -->
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="estrato">Estrato</label>
+                            <select id="estrato" name="estrato" style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                                <option value="">Seleccione una opción</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tipoTecho">Tipo de techo*</label>
+                            <select id="tipoTecho" name="tipoTecho" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                                <option value="">Seleccione una opción</option>
+                                <option value="losa">Losa de concreto</option>
+                                <option value="teja_barro">Teja de barro</option>
+                                <option value="teja_eternit">Teja de eternit</option>
+                                <option value="teja_plastica">Teja plástica</option>
+                                <option value="teja_metalica">Teja metálica plana</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Consumo y Valor de Energía -->
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="consumoEnergia">Consumo de energía del último mes (kWh)*</label>
+                            <input type="number" id="consumoEnergia" name="consumoEnergia" placeholder="Consumo de energía de su cuenta de servicios" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                            <small style="font-size: 0.8rem; color: #666;">Si tu factura es trimestral divide por 3 el consumo. Para más información presione aquí</small>
+                        </div>
+                        <div>
+                            <label for="valorEnergia">Valor de energía eléctrica pagado en el último mes*</label>
+                            <input type="number" id="valorEnergia" name="valorEnergia" placeholder="Valor a pagar de energía de su cuenta de servicios" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                            <small style="font-size: 0.8rem; color: #666;">Si tu factura es trimestral divide por 3 el valor pagado. Para saber cómo encontrar este valor presione aquí</small>
+                        </div>
+                    </div>
+
+                    <!-- Reorganizar la sección final del formulario -->
+                    <div class="form-additional-options" style="margin-top: 2rem;">
+                        <div class="storage-options">
+                            <label style="display: block; margin-bottom: 1rem;">Opciones de almacenamiento ▼</label>
+                        </div>
+                        
+                        <div class="email-preference" style="margin: 1rem 0;">
+                            <label style="display: block; margin-bottom: 0.5rem;">¿Desea recibir los resultados en su correo?</label>
+                            <select style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        
+                        <div class="terms-conditions" style="margin: 1rem 0;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" required>
+                                <span>Confirmas estar de acuerdo con nuestra <a href="#" style="color: #e0bd1a;">política de manejo de información y datos personales</a> y <a href="#" style="color: #e0bd1a;">términos y condiciones del sitio web</a>?</span>
+                            </label>
+                        </div>
+
+                        <!-- Notas movidas antes del botón -->
+                        <div class="form-note" style="margin: 1rem 0; font-size: 0.9rem;">
+                            <p>* Campos Obligatorios</p>
+                            <p style="margin-top: 0.5rem;">Nota: Si es un usuario no conectado a la red eléctrica, contáctenos al correo <a href="mailto:comercial@reikisolar.shop" style="color: #e0bd1a;">comercial@reikisolar.shop</a> para recibir la asesoría correspondiente.</p>
+                        </div>
+
+                        <!-- Botón de envío después de las notas -->
+                        <div class="form-group" style="text-align: center; margin-top: 2rem;">
+                            <button type="submit" class="cta-button" style="
+                                background: #e0bd1a;
+                                color: #2c1d4a;
+                                border: none;
+                                padding: 1rem 3rem;
+                                border-radius: 25px;
+                                font-weight: bold;
+                                cursor: pointer;">
+                                Calcula tu proyecto solar
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -176,129 +297,6 @@
             document.getElementById('contactForm').reset();
         }
     </script>
-
-    <!-- Centro de Ayuda -->
-    <section class="help-center" style="padding: 4rem 0;">
-        <div class="container">
-            <h1 style="text-align: center; margin-bottom: 2rem;">Centro de ayuda</h1>
-            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">¿En qué podemos ayudarte?</h2>
-
-            <!-- Tarjetas de Contacto -->
-            <div class="contact-cards" style="
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
-                margin-bottom: 4rem;">
-                
-                <!-- Teléfono -->
-                <div class="contact-card" style="
-                    background: white;
-                    padding: 2rem;
-                    border-radius: 15px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    text-align: center;">
-                    <h5>¡Hablemos!</h5>
-                    <p style="margin: 1rem 0;">
-                        Opción 1: Emergencias<br>
-                        Opción 2: Ventas<br>
-                        Opción 3: Soporte al cliente
-                    </p>
-                    <a href="tel:+576016659652" style="
-                        display: block;
-                        color: #2c1d4a;
-                        font-weight: bold;
-                        font-size: 1.2rem;
-                        margin-top: 1rem;">
-                        (601) 6659652
-                    </a>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="contact-card" style="
-                    background: white;
-                    padding: 2rem;
-                    border-radius: 15px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    text-align: center;">
-                    <h5>Chatea con nosotros</h5>
-                    <p style="margin: 1rem 0;">¡Habla con nosotros! Escríbenos y elige la opción que mejor se adapte a tus necesidades; un experto te responderá.</p>
-                    <a href="https://wa.me/573245737413" class="cta-button" style="
-                        display: inline-block;
-                        background: #e0bd1a;
-                        color: #2c1d4a;
-                        padding: 0.8rem 2rem;
-                        border-radius: 25px;
-                        text-decoration: none;
-                        font-weight: bold;
-                        margin-top: 1rem;">
-                        ¡Escríbenos!
-                    </a>
-                </div>
-
-                <!-- Cotización -->
-                <div class="contact-card" style="
-                    background: white;
-                    padding: 2rem;
-                    border-radius: 15px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    text-align: center;">
-                    <h5>Cotiza tu proyecto ahora</h5>
-                    <p style="margin: 1rem 0;">Te brindamos una cotización que se ajusta a tus necesidades ya sea para tu hogar o empresa.</p>
-                    <button class="cta-button" style="
-                        background: #e0bd1a;
-                        color: #2c1d4a;
-                        border: none;
-                        padding: 0.8rem 2rem;
-                        border-radius: 25px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        margin-top: 1rem;">
-                        ¡Cotiza un servicio!
-                    </button>
-                </div>
-            </div>
-
-            <!-- PQRS -->
-            <div class="pqrs-section" style="
-                background: white;
-                padding: 3rem;
-                border-radius: 15px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                text-align: center;
-                margin-bottom: 4rem;">
-                <h3>¡Deja tu requerimiento aquí!</h3>
-                <p style="margin: 1rem 0;">Nuestro equipo se encargará de revisar la información para darte respuesta en el menor tiempo posible.</p>
-                <button class="outline-button" style="
-                    background: transparent;
-                    border: 2px solid #2c1d4a;
-                    color: #2c1d4a;
-                    padding: 0.8rem 2rem;
-                    border-radius: 25px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    margin-top: 1rem;">
-                    Radica una PQRS
-                </button>
-            </div>
-
-            <!-- Blog Section -->
-            <div class="blog-section" style="text-align: center; margin-bottom: 4rem;">
-                <h4>¿Quieres aprender más?</h4>
-                <p style="margin: 1rem 0;">Dale un vistazo a nuestro blog y entérate de todo sobre energía, desde comercialización hasta energía solar.</p>
-                <a href="#blog" class="cta-button" style="
-                    display: inline-block;
-                    background: #e0bd1a;
-                    color: #2c1d4a;
-                    padding: 0.8rem 2rem;
-                    border-radius: 25px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    margin-top: 1rem;">
-                    Visita nuestro blog
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
