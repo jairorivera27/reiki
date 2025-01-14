@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiki Energía Solar - Soluciones de Energía Renovable</title>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra superior de contacto -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+573245737413"><i class="fas fa-phone"></i> +57 324 573 7413</a>
+                <a href="mailto:comercial@reikisolar.shop"><i class="fas fa-envelope"></i> comercial@reikisolar.shop</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo_blanco.png" alt="Reiki Energía Solar" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="quote-button">Cotiza Ya</button>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="
+        background: linear-gradient(rgba(44, 29, 74, 0.4), rgba(44, 29, 74, 0.4)), url('7040278-uhd_4096_1974_30fps.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: white;">
+        <div class="video-background">
+            <video autoplay muted loop playsinline preload="auto" id="heroVideo">
+                <source src="7040278-uhd_4096_1974_30fps.mp4" type="video/mp4">
+                <source src="7040278-uhd_4096_1974_30fps.webm" type="video/webm">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="container" style="
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            transform: translateY(-20vh);">
+            <h1 style="font-size: 4rem; font-weight: bold; margin-bottom: 0.5rem; line-height: 1.1;">NO PAGUES MÁS ENERGÍA ELÉCTRICA</h1>
+            <p style="font-size: 1.8rem; margin-bottom: 2rem; line-height: 1.2;">Con energía solar disminuyes el gasto de tus servicios públicos</p>
+            <button class="cta-button" style="position: relative; z-index: 3;">Cotiza Gratis Ahora</button>
+        </div>
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);">100%</h3>
+                        <p>de ahorro en tu factura de energía</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);">25</h3>
+                        <p>años de vida útil de tu sistema</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-leaf stat-icon" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);"></i>
+                        <p>Sostenibilidad ambiental</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-bolt stat-icon" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);"></i>
+                        <p>Eficiencia energética</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuevo bloque de servicios -->
+    <section class="services-banner">
+        <div class="container">
+            <div class="services-content">
+                <h2>Ahorra al máximo en tu factura<br>de energía eléctrica</h3>
+                <h2 class="services-subtitle">Con nuestras soluciones de energía solar</h1>
+                <h2 class="services-subtitle">diseñadas para tu hogar, industria o proyecto</h1>
+                <button class="cta-button-purple">Conoce más</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque de Energía Solar para Vivienda -->
+    <section class="residential-solar">
+        <div class="container">
+            <div class="residential-content">
+                <div class="residential-text">
+                    <h2>Energía Solar<br>para tu Vivienda</h2>
+                    <p>Instalamos sistemas solares para tu hogar, ya sean interconectados a la red para maximizar el ahorro o desconectados de la red eléctrica funcionando con baterías para total independencia energética</p>
+                    <div class="residential-buttons">
+                        <button class="outline-button">Cotiza en línea</button>
+                        <button class="outline-button">Hablar con un asesor</button>
+                    </div>
+                </div>
+                <div class="residential-benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                        <p>Hasta 100% de ahorro en tu factura de energía</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-cogs"></i>
+                        <p>Equipos de última tecnología</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-star"></i>
+                        <p>Beneficios tributarios</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Valorización de tu vivienda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque de Energía Solar para Industria -->
+    <section class="residential-solar industrial-solar">
+        <div class="container">
+            <div class="residential-content reverse-layout">
+                <div class="residential-text text-right">
+                    <h2>SIN INVERSIÓN<br>Energía solar para tu empresa</h2>
+                    <p>Incorporamos energía solar y te brindamos un descuento en la tarifa de energía hasta un 30%. Tu conjunto residencial transita hacia el ahorro brillante en las zonas comunes a cero costo de inversión.</p>
+                    <div class="residential-buttons">
+                        <button class="outline-button">Cotiza en línea</button>
+                        <button class="outline-button">Hablar con un asesor</button>
+                    </div>
+                </div>
+                <div class="residential-benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                        <p>Sin costos de<br>inversión</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-cogs"></i>
+                        <p>Mantenimientos<br>del sistema<br>incluidos</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-star"></i>
+                        <p>Contratos de<br>Compra de<br>Energía por 10<br>años</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Recibe tu certificado<br>de Energías Limpias</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <p>Ahorro de energía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque de Planta Fotovoltaica Móvil -->
+    <section class="residential-solar mobile-solar">
+        <div class="container">
+            <div class="residential-content">
+                <div class="residential-text">
+                    <h2>Planta fotovoltaica<br>móvil</h2>
+                    <p>La capacidad de generación de energía de una planta fotovoltaica transportable varía según el modelo y la configuración de la planta</p>
+                    <div class="residential-buttons">
+                        <button class="outline-button">Cotiza en línea</button>
+                        <button class="outline-button">Hablar con un asesor</button>
+                    </div>
+                </div>
+                <div class="residential-benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-box"></i>
+                        <p>Prefabricado en contenedores<br>fácil de instalar</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-sliders-h"></i>
+                        <p>Una planta 100% personalizable<br>y escalable para satisfacer<br>tus demandas de energía</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-truck"></i>
+                        <p>Unidades despegables que<br>pueden desplegarse y reubicarse,<br>donde lo necesites</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-laptop"></i>
+                        <p>Renta Online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuevo bloque de soluciones adicionales -->
+    <section class="solutions-grid">
+        <div class="solution-item">
+            <img src="luminarias.jpg" alt="Luminarias Solares">
+            <div class="solution-content">
+                <h2>Luminarias solares</h2>
+                <p>Iluminación eficiente y sostenible que utiliza energía solar para brindar luz en cualquier lugar, perfecto para unidades residenciales y vías privadas, reduciendo costos y cuidando el medio ambiente.</p>
+                <button class="outline-button">Ver más <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="solution-item">
+            <img src="kits.jpg" alt="Kits Solares">
+            <div class="solution-content">
+                <h2>Kits solares</h2>
+                <p>Soluciones completas de energía renovable, de fácil instalación, que incluyen todo lo necesario para generar y almacenar electricidad limpia, ideales para hogares y negocios.</p>
+                <button class="outline-button">Ver más <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="solution-item">
+            <img src="eficiencia.jpg" alt="Eficiencia y Mantenimiento">
+            <div class="solution-content">
+                <h2>Eficiencia y mantenimiento eléctrico</h2>
+                <p>Servicios especializados para optimizar el consumo energético y garantizar un funcionamiento seguro y continuo de tus sistemas eléctricos.</p>
+                <button class="outline-button">Ver más <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+        <!-- Onda superior -->
+        <div class="wave-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill="#2c1d4a" fill-opacity="1" d="M0,32L40,37.3C80,43,160,53,240,58.7C320,64,400,64,480,58.7C560,53,640,43,720,42.7C800,43,880,53,960,58.7C1040,64,1120,64,1200,58.7C1280,53,1360,43,1400,37.3L1440,32L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"></path>
+            </svg>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-image">
+                <video autoplay muted loop playsinline class="contact-video">
+                    <source src="8853493-hd_1920_1080_24fps.mp4" type="video/mp4">
+                    <source src="8853493-hd_1920_1080_24fps.webm" type="video/webm">
+                    <source src="8853493-hd_1920_1080_24fps.ogv" type="video/ogg">
+                </video>
+                <div class="contact-overlay"></div>
+            </div>
+            <div class="contact-content">
+                <h2>Reiki Energía Solar</h2>
+                <h3>COMUNÍCATE CON NOSOTROS<br></h3>
+                <div class="contact-form">
+                    <h4>Contáctanos</h4>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre y Apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Celular" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill="#2c1d4a" fill-opacity="1" d="M0,64L40,69.3C80,75,160,85,240,80C320,75,400,53,480,42.7C560,32,640,32,720,42.7C800,53,880,75,960,80C1040,85,1120,75,1200,69.3C1280,64,1360,64,1400,64L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo y eslogan -->
+                <div class="footer-brand">
+                    <img src="Logo_color.png" alt="Reiki Energía Solar" class="footer-logo">
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Servicio al cliente: +57 324 573 7413</li>
+                        <li><i class="fas fa-envelope"></i> comercial@reikisolar.shop</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bello, Antioquia</li>
+                    </ul>
+                    <button class="quote-button">Solicita ya tu cotización</button>
+                </div>
+
+                <!-- Blog -->
+                <div class="footer-blog">
+                    <h3>Blog</h3>
+                    <ul>
+                        <li><a href="#">Instalación de paneles solares: cómo funciona y componentes principales</a></li>
+                        <li><a href="#">El lío de los cobros adicionales por Energías Reactivas en el país</a></li>
+                        <li><a href="#">Autogeneradores de energía con paneles solares</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+                <p class="copyright">Copyright © 2024 Reiki Energía Solar. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Actualizar el script para mejor manejo de la reproducción
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('heroVideo');
+            
+            // Función para intentar reproducir el video
+            function playVideo() {
+                const playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        // Reproducción exitosa
+                        console.log('Video reproduciendo correctamente');
+                    })
+                    .catch(error => {
+                        // Auto-play fue prevenido
+                        console.log("Error reproduciendo video:", error);
+                        // Reintentar después de un segundo
+                        setTimeout(playVideo, 1000);
+                    });
+                }
+            }
+
+            // Intentar reproducir inicialmente
+            playVideo();
+
+            // Reintentar si el video se pausa
+            video.addEventListener('pause', playVideo);
+
+            // Manejar visibilidad de página
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible') {
+                    playVideo();
+                }
+            });
+
+            // Manejar interacción del usuario
+            document.addEventListener('click', function() {
+                playVideo();
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatarContainer = document.querySelector('.avatar-container');
+            const audio = document.getElementById('greetingAudio');
+            let hasPlayed = false;
+
+            // Reproducir audio al hacer clic en el avatar
+            avatarContainer.addEventListener('click', function() {
+                audio.play();
+            });
+
+            // Reproducir audio automáticamente después de 3 segundos (solo la primera vez)
+            setTimeout(function() {
+                if (!hasPlayed) {
+                    audio.play();
+                    hasPlayed = true;
+                }
+            }, 3000);
+
+            // Mostrar el globo de texto cuando el audio comienza a reproducirse
+            audio.addEventListener('play', function() {
+                const speechBubble = document.querySelector('.speech-bubble');
+                speechBubble.style.opacity = '1';
+                speechBubble.style.transform = 'translateY(0)';
+                
+                // Ocultar el globo después de 3 segundos
+                setTimeout(function() {
+                    speechBubble.style.opacity = '0';
+                    speechBubble.style.transform = 'translateY(20px)';
+                }, 3000);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatarVideo = document.getElementById('avatarVideo');
+            const avatarContainer = document.querySelector('.avatar-container');
+
+            // Función para manejar el audio del video
+            avatarContainer.addEventListener('mouseenter', function() {
+                avatarVideo.muted = false; // Activar el audio
+            });
+
+            avatarContainer.addEventListener('mouseleave', function() {
+                avatarVideo.muted = true; // Silenciar el audio
+            });
+        });
+    </script>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Avatar Flotante -->
+    <div class="avatar-float">
+        <div class="avatar-container">
+            <video autoplay muted loop playsinline class="avatar-img" id="avatarVideo">
+                <source src="avatar.mp4" type="video/mp4">
+                <source src="avatar.webm" type="video/webm">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div class="speech-bubble">¿Quieres saber cómo cotizar?</div>
+        </div>
+    </div>
+
+</body>
+</html>

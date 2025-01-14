@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Reiki Energía Solar</title>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra superior de contacto -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+573245737413"><i class="fas fa-phone"></i> +57 324 573 7413</a>
+                <a href="mailto:comercial@reikisolar.shop"><i class="fas fa-envelope"></i> comercial@reikisolar.shop</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo_blanco.png" alt="Reiki Energía Solar" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="./contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="quote-button">Cotiza Ya</button>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="
+        background: linear-gradient(rgba(44, 29, 74, 0.4), rgba(44, 29, 74, 0.4)),
+        url('contacto-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 6rem 0;
+        color: white;
+        text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Centro de ayuda</h1>
+            <p style="font-size: 1.2rem;">Estamos aquí para ayudarte</p>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section class="contact-form" style="
+        background: white;
+        padding: 4rem 0;
+        margin-top: -4rem;
+        position: relative;
+        z-index: 1;">
+        <div class="container">
+            <div class="form-container" style="
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <form id="contactForm" style="display: grid; gap: 1.5rem;" onsubmit="enviarWhatsApp(event)">
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                        </div>
+                        <div>
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                        </div>
+                        <div>
+                            <label for="ciudad">Ciudad *</label>
+                            <input type="text" id="ciudad" name="ciudad" required style="
+                                width: 100%;
+                                padding: 0.8rem;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required style="
+                            width: 100%;
+                            padding: 0.8rem;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="cta-button" style="
+                            background: #e0bd1a;
+                            color: #2c1d4a;
+                            border: none;
+                            padding: 1rem 3rem;
+                            border-radius: 25px;
+                            font-weight: bold;
+                            cursor: pointer;">
+                            Enviar mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const ciudad = document.getElementById('ciudad').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Crear el mensaje para WhatsApp
+            const mensajeWhatsApp = `¡Hola! Te contacto desde el formulario web:%0A%0A` +
+                `*Nombre:* ${nombre}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Teléfono:* ${telefono}%0A` +
+                `*Ciudad:* ${ciudad}%0A` +
+                `*Mensaje:* ${mensaje}`;
+            
+            // Crear el enlace de WhatsApp y redirigir
+            const urlWhatsApp = `https://wa.me/573245737413?text=${mensajeWhatsApp}`;
+            window.open(urlWhatsApp, '_blank');
+            
+            // Limpiar el formulario
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+    <!-- Centro de Ayuda -->
+    <section class="help-center" style="padding: 4rem 0;">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Centro de ayuda</h1>
+            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">¿En qué podemos ayudarte?</h2>
+
+            <!-- Tarjetas de Contacto -->
+            <div class="contact-cards" style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-bottom: 4rem;">
+                
+                <!-- Teléfono -->
+                <div class="contact-card" style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    text-align: center;">
+                    <h5>¡Hablemos!</h5>
+                    <p style="margin: 1rem 0;">
+                        Opción 1: Emergencias<br>
+                        Opción 2: Ventas<br>
+                        Opción 3: Soporte al cliente
+                    </p>
+                    <a href="tel:+576016659652" style="
+                        display: block;
+                        color: #2c1d4a;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-top: 1rem;">
+                        (601) 6659652
+                    </a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-card" style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    text-align: center;">
+                    <h5>Chatea con nosotros</h5>
+                    <p style="margin: 1rem 0;">¡Habla con nosotros! Escríbenos y elige la opción que mejor se adapte a tus necesidades; un experto te responderá.</p>
+                    <a href="https://wa.me/573245737413" class="cta-button" style="
+                        display: inline-block;
+                        background: #e0bd1a;
+                        color: #2c1d4a;
+                        padding: 0.8rem 2rem;
+                        border-radius: 25px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        margin-top: 1rem;">
+                        ¡Escríbenos!
+                    </a>
+                </div>
+
+                <!-- Cotización -->
+                <div class="contact-card" style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    text-align: center;">
+                    <h5>Cotiza tu proyecto ahora</h5>
+                    <p style="margin: 1rem 0;">Te brindamos una cotización que se ajusta a tus necesidades ya sea para tu hogar o empresa.</p>
+                    <button class="cta-button" style="
+                        background: #e0bd1a;
+                        color: #2c1d4a;
+                        border: none;
+                        padding: 0.8rem 2rem;
+                        border-radius: 25px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        margin-top: 1rem;">
+                        ¡Cotiza un servicio!
+                    </button>
+                </div>
+            </div>
+
+            <!-- PQRS -->
+            <div class="pqrs-section" style="
+                background: white;
+                padding: 3rem;
+                border-radius: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                text-align: center;
+                margin-bottom: 4rem;">
+                <h3>¡Deja tu requerimiento aquí!</h3>
+                <p style="margin: 1rem 0;">Nuestro equipo se encargará de revisar la información para darte respuesta en el menor tiempo posible.</p>
+                <button class="outline-button" style="
+                    background: transparent;
+                    border: 2px solid #2c1d4a;
+                    color: #2c1d4a;
+                    padding: 0.8rem 2rem;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-top: 1rem;">
+                    Radica una PQRS
+                </button>
+            </div>
+
+            <!-- Blog Section -->
+            <div class="blog-section" style="text-align: center; margin-bottom: 4rem;">
+                <h4>¿Quieres aprender más?</h4>
+                <p style="margin: 1rem 0;">Dale un vistazo a nuestro blog y entérate de todo sobre energía, desde comercialización hasta energía solar.</p>
+                <a href="#blog" class="cta-button" style="
+                    display: inline-block;
+                    background: #e0bd1a;
+                    color: #2c1d4a;
+                    padding: 0.8rem 2rem;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    margin-top: 1rem;">
+                    Visita nuestro blog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo y eslogan -->
+                <div class="footer-brand">
+                    <img src="Logo_color.png" alt="Reiki Energía Solar" class="footer-logo">
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Servicio al cliente: +57 324 573 7413</li>
+                        <li><i class="fas fa-envelope"></i> comercial@reikisolar.shop</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bello, Antioquia</li>
+                    </ul>
+                    <button class="quote-button">Solicita ya tu cotización</button>
+                </div>
+
+                <!-- Blog -->
+                <div class="footer-blog">
+                    <h3>Blog</h3>
+                    <ul>
+                        <li><a href="#">Instalación de paneles solares: cómo funciona y componentes principales</a></li>
+                        <li><a href="#">El lío de los cobros adicionales por Energías Reactivas en el país</a></li>
+                        <li><a href="#">Autogeneradores de energía con paneles solares</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+                <p class="copyright">Copyright © 2024 Reiki Energía Solar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html> 
