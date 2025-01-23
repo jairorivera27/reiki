@@ -100,9 +100,19 @@
                 Cotiza ahora gratis
             </a>
         </div>
-        <div class="hero-stats">
+        <div class="hero-stats" style="
+            background: rgba(179, 154, 47, 0.096);  /* Volvemos a la opacidad original de 0.9 */
+            padding: 2rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;">
             <div class="container">
-                <div class="stats-grid">
+                <div class="stats-grid" style="
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 2rem;
+                    text-align: center;
+                    color: #2c1d4a;">
                     <div class="stat-item">
                         <h3 style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);">100%</h3>
                         <p>de ahorro en tu factura de energía</p>
@@ -347,7 +357,7 @@
     </section>
 
     <!-- Nuevo bloque de soluciones adicionales -->
-    <section class="solutions-grid">
+    <section class="solutions-grid" style="margin-bottom: 4rem;">
         <div class="solution-item">
             <img src="luminarias.jpg" alt="Luminarias Solares">
             <div class="solution-content">
@@ -375,7 +385,7 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section class="contact-section">
+    <section class="contact-section" style="margin-top: 4rem;">
         <!-- Onda superior -->
         <div class="wave-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
@@ -383,15 +393,12 @@
             </svg>
         </div>
 
-        <div class="contact-wrapper">
-            <div class="contact-image">
-                <video autoplay muted loop playsinline class="contact-video">
-                    <source src="8853493-hd_1920_1080_24fps.mp4" type="video/mp4">
-                    <source src="8853493-hd_1920_1080_24fps.webm" type="video/webm">
-                    <source src="8853493-hd_1920_1080_24fps.ogv" type="video/ogg">
-                </video>
-                <div class="contact-overlay"></div>
-            </div>
+        <div class="contact-wrapper" style="
+            background: linear-gradient(rgba(44, 29, 74, 0.8), rgba(44, 29, 74, 0.8)), 
+            url('r.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;">
             <div class="contact-content">
                 <h2>Reiki Energía Solar</h2>
                 <h3>COMUNÍCATE CON NOSOTROS<br></h3>
@@ -433,9 +440,15 @@
                     <img src="logo_color.png" alt="Reiki Energía Solar" class="footer-logo">
 
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61551829530814&mibextid=ZbWKwL" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/reikiener?igsh=MTRjY2tvcmpua3MwMw%3D%3D" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
 

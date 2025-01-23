@@ -63,11 +63,19 @@
             <div class="hero-tabs">
                 <button class="hero-tab">
                     <i class="fas fa-home"></i>
-                    Hogar
+                    <a href="/servicios.html" style="
+                        text-decoration: none;
+                        color: inherit;">
+                        Hogar
+                    </a>
                 </button>
                 <button class="hero-tab active">
                     <i class="fas fa-building"></i>
-                    Empresas
+                    <a href="/empresas.html" style="
+                        text-decoration: none;
+                        color: inherit;">
+                        Empresas
+                    </a>
                 </button>
                 <button class="hero-tab">
                     <i class="fas fa-truck-moving"></i>
@@ -80,6 +88,60 @@
             </div>
             <h1>Menos costos, menos huella de carbono</h1>
             <p class="hero-subtitle">Te ofrecemos lo mejor de la energía solar para tu empresa: un futuro verde y sostenible</p>
+        </div>
+    </section>
+
+    <!-- Sección de Beneficios -->
+    <section class="benefits-buttons" style="
+        padding: 2rem 0;
+        background: white;
+        margin-top: -2rem;
+        position: relative;
+        z-index: 2;">
+        <div class="container">
+            <div class="buttons-grid" style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;">
+                
+                <!-- Botón 1: Respaldo de energía -->
+                <div class="benefit-button" style="
+                    background: #2c1d4a;
+                    color: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    text-align: left;">
+                    <i class="fas fa-battery-full" style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Respaldo de energía</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4;">Almacena y utiliza la energía en cualquier momento en caso de fallas de la red.</p>
+                </div>
+
+                <!-- Botón 2: Beneficios tributarios -->
+                <div class="benefit-button" style="
+                    background: #2c1d4a;
+                    color: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    text-align: left;">
+                    <i class="fas fa-hand-holding-dollar" style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Beneficios tributarios</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4;">Accede a beneficios tributarios por tu sistema de respaldo.</p>
+                </div>
+
+                <!-- Botón 3: Eficiencia -->
+                <div class="benefit-button" style="
+                    background: #2c1d4a;
+                    color: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    text-align: left;">
+                    <i class="fas fa-bolt" style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Eficiencia</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4;">Almacenamiento de excedentes, recorte de picos y traslado de cargas.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -137,38 +199,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Beneficios Empresariales -->
-            <div class="benefits-grid" style="
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1rem;
-                margin-top: 2rem;">
-                <div class="benefit-item" style="
-                    background: #f8f8f8;
-                    padding: 1rem;
-                    border-radius: 10px;
-                    text-align: center;">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Disminución de emisiones de CO2</h4>
-                </div>
-                <div class="benefit-item" style="
-                    background: #f8f8f8;
-                    padding: 1rem;
-                    border-radius: 10px;
-                    text-align: center;">
-                    <i class="fas fa-piggy-bank"></i>
-                    <h4>Recibe beneficios tributarios</h4>
-                </div>
-                <div class="benefit-item" style="
-                    background: #f8f8f8;
-                    padding: 1rem;
-                    border-radius: 10px;
-                    text-align: center;">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Genera ahorros para más inversiones</h4>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -196,7 +226,7 @@
                     margin-bottom: 1rem;">
                     <i class="fas fa-dollar-sign" style="color: var(--primary-color);"></i>
                 </div>
-                <h2>¡Conoce alternativas de financiación para tus necesidades!</h2>
+                <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">¡INSTALA TU PROYECTO FOTOVOLTAICO CON CERO INVERSIÓN INICIAL Y PAGA MENOS POR ENERGÍA!</h2>
                 <p>Encuentra aquí las diferentes formas de pago para adquirir una de nuestras soluciones.</p>
                 <button class="cta-button" style="
                     background: var(--accent-color);
