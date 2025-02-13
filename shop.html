@@ -34,26 +34,16 @@
                 <img src="logo_blanco.png" alt="Reiki Energía Solar" class="logo-img">
             </div>
             <ul class="nav-links">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/nosotros.html">Nosotros</a></li>
-                <li><a href="/servicios.html">Servicios</a></li>
-                <li><a href="/shop.html" class="active">Shop</a></li>
-                <li><a href="/calculadora/index.html">Calculadora</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="calculadora/index.html">Calculadora</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
             <div class="nav-buttons">
-                <a href="https://wa.me/573245737413" target="_blank" class="quote-button" style="
-                    text-decoration: none;
-                    display: inline-block;
-                    background: #e0bd1a;
-                    color: #2c1d4a;
-                    padding: 0.8rem 2rem;
-                    border-radius: 25px;
-                    font-weight: bold;
-                    cursor: pointer;">
-                    Cotiza Ya
-                </a>
+                <button class="quote-button">Cotiza Ya</button>
                 <button class="nav-toggle">
                     <span></span>
                     <span></span>
@@ -63,15 +53,22 @@
         </div>
     </nav>
 
-    <!-- Hero Section de la Tienda -->
-    <section class="shop-hero">
+    <!-- Hero Section Shop -->
+    <section class="shop-hero" style="
+        background: linear-gradient(rgba(44, 29, 74, 0.8), rgba(44, 29, 74, 0.8)),
+        url('shop-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 150px 0 80px;
+        text-align: center;
+        color: var(--white);">
         <div class="container">
-            <h1>Tienda Solar</h1>
-            <p class="subtitle">Encuentra todo lo que necesitas para tu proyecto de energía solar</p>
+            <h1>Tienda de Energía Solar</h1>
+            <p class="hero-subtitle">Encuentra todo lo que necesitas para tu proyecto solar</p>
         </div>
     </section>
 
-    <!-- Filtros y Categorías -->
+    <!-- Filtros de Productos -->
     <section class="shop-filters">
         <div class="container">
             <div class="filters-wrapper">
@@ -90,37 +87,40 @@
         </div>
     </section>
 
-    <!-- Productos Grid -->
+    <!-- Productos -->
     <section class="products-section">
         <div class="container">
             <div class="products-grid">
                 <!-- Producto 1 -->
                 <div class="product-card">
-                    <div class="product-badge">Nuevo</div>
-                    <img src="producto1.jpg" alt="Panel Solar 400W">
+                    <span class="product-badge">Nuevo</span>
+                    <img src="panel-solar-1.jpg" alt="Panel Solar 450W">
                     <div class="product-info">
-                        <h3>Panel Solar 400W</h3>
+                        <h3>Panel Solar 450W</h3>
                         <p class="product-description">Panel solar monocristalino de alta eficiencia</p>
                         <div class="product-meta">
-                            <span class="product-price">$599.99</span>
-                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+                            <div class="product-price">
+                                <span class="original-price">$1,200,000</span>
+                                $999,000
+                            </div>
+                            <button class="add-to-cart">Agregar</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Producto 2 -->
                 <div class="product-card">
-                    <div class="product-badge sale">Oferta</div>
-                    <img src="producto2.jpg" alt="Inversor Solar 3000W">
+                    <span class="product-badge sale">Oferta</span>
+                    <img src="inversor-1.jpg" alt="Inversor Solar">
                     <div class="product-info">
                         <h3>Inversor Solar 3000W</h3>
-                        <p class="product-description">Inversor híbrido con conexión WiFi</p>
+                        <p class="product-description">Inversor híbrido de alta potencia</p>
                         <div class="product-meta">
-                            <span class="product-price">
-                                <span class="original-price">$899.99</span>
-                                $799.99
-                            </span>
-                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+                            <div class="product-price">
+                                <span class="original-price">$2,500,000</span>
+                                $2,100,000
+                            </div>
+                            <button class="add-to-cart">Agregar</button>
                         </div>
                     </div>
                 </div>
@@ -133,19 +133,10 @@
                 <button class="page-btn active">1</button>
                 <button class="page-btn">2</button>
                 <button class="page-btn">3</button>
-                <button class="page-btn">...</button>
-                <button class="page-btn">10</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
-
-    <!-- Carrito Flotante -->
-    <div class="cart-float">
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -153,11 +144,11 @@
             <div class="footer-content">
                 <!-- Logo y eslogan -->
                 <div class="footer-brand">
-                    <img src="Logo_color.png" alt="Reiki Energía Solar" class="footer-logo">
+                    <img src="logo_color.png" alt="Reiki Energía Solar" class="footer-logo">
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/reikienergiasolar" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reikienergiasolar/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -169,17 +160,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@reikisolar.shop</li>
                         <li><i class="fas fa-map-marker-alt"></i> Bello, Antioquia</li>
                     </ul>
-                    <a href="https://wa.me/573245737413" target="_blank" class="quote-button" style="
-                        text-decoration: none;
-                        display: inline-block;
-                        background: #e0bd1a;
-                        color: #2c1d4a;
-                        padding: 0.8rem 2rem;
-                        border-radius: 25px;
-                        font-weight: bold;
-                        cursor: pointer;">
-                        Solicita ya tu cotización
-                    </a>
+                    <button class="quote-button">Solicita ya tu cotización</button>
                 </div>
 
                 <!-- Blog -->
@@ -210,5 +191,32 @@
     <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-float">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+
+    <script>
+        // Script para el menú móvil
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 

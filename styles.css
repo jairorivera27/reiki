@@ -9,12 +9,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-shadow: 0 0 1px transparent;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    letter-spacing: 0.015em;
+    font-smooth: always;
+    text-rendering: geometricPrecision;
 }
 
 .container {
@@ -73,6 +80,9 @@ body {
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .nav-links a:hover,
@@ -146,11 +156,18 @@ body {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .hero .subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.01em;
 }
 
 .cta-button {
@@ -167,6 +184,9 @@ body {
     position: relative;
     z-index: 5;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .cta-button:hover {
@@ -199,6 +219,9 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .contact-info a:hover {
@@ -233,6 +256,9 @@ body {
     background-color: var(--primary-color);
     margin: 5px 0;
     transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 /* Media query para dispositivos móviles */
@@ -302,6 +328,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .quote-button:hover {
@@ -334,6 +363,9 @@ body {
     letter-spacing: 1px;
     border-radius: 5px;
     transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .contact-button:hover {
@@ -357,6 +389,8 @@ body {
 .footer {
     background-color: var(--white);
     padding: 4rem 0 0;
+    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+    font-smooth: always;
 }
 
 .footer-content {
@@ -366,21 +400,25 @@ body {
     margin-bottom: 2rem;
 }
 
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .footer-logo {
     width: 200px;
     height: auto;
     margin-bottom: 1.5rem;
 }
 
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .slogan {
     color: var(--text-color);
     margin-bottom: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.01em;
 }
 
 .social-links {
@@ -409,6 +447,10 @@ body {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    font-weight: 600;
 }
 
 .footer-contact ul,
@@ -435,6 +477,9 @@ body {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .footer-blog a:hover {
@@ -446,6 +491,9 @@ body {
     padding: 1rem 0;
     color: var(--white);
     font-size: 0.9rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .footer-bottom .container {
@@ -463,6 +511,9 @@ body {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .footer-links a:hover {
@@ -510,6 +561,9 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .impact-subtitle {
@@ -517,6 +571,9 @@ body {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .impact-grid {
@@ -536,18 +593,27 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--accent-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .impact-numbers h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .impact-numbers p {
     font-size: 1rem;
     opacity: 0.9;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Media queries para responsividad */
@@ -606,22 +672,34 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .stat-item p {
     font-size: 1.2rem;
     font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .stat-item small {
     font-size: 0.9rem;
     opacity: 0.8;
     margin-top: 0.25rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
 }
 
 .battery-icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 /* Media queries para responsividad */
@@ -705,6 +783,9 @@ body {
 .contact-content h4 {
     color: var(--white);
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .contact-content h2 {
@@ -737,6 +818,9 @@ body {
     color: var(--white);
     font-size: 1rem;
     transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .form-group textarea {
@@ -767,6 +851,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .submit-button:hover {
@@ -810,6 +897,9 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Ajuste responsive */
@@ -894,11 +984,17 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .about-hero .subtitle {
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .about-content {
@@ -922,6 +1018,9 @@ body {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     margin-top: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .about-text h2:first-child {
@@ -932,6 +1031,9 @@ body {
     text-align: justify;
     margin-bottom: 2rem;
     line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .about-image {
@@ -972,6 +1074,9 @@ body {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .values-grid {
@@ -996,11 +1101,17 @@ body {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .value-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 /* Media queries para responsividad */
@@ -1072,6 +1183,7 @@ body {
     text-shadow: 2px 2px 4px rgba(44, 29, 74, 0.8),
                   0 0 10px rgba(44, 29, 74, 0.5);
     line-height: 1.2;
+    font-smooth: always;
 }
 
 .services-content h2 {
@@ -1079,6 +1191,9 @@ body {
     margin-bottom: 1rem;
     text-shadow: 3px 3px 6px rgba(44, 29, 74, 0.9),
                   0 0 15px rgba(44, 29, 74, 0.6);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .services-subtitle {
@@ -1087,6 +1202,9 @@ body {
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(44, 29, 74, 0.8),
                   0 0 12px rgba(44, 29, 74, 0.5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .services-description {
@@ -1098,6 +1216,9 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .services-tagline {
@@ -1110,6 +1231,9 @@ body {
     position: relative;
     z-index: 3;
     opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 /* Responsive */
@@ -1154,6 +1278,9 @@ body {
     position: relative;
     z-index: 3;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .services-banner .cta-button-purple:hover {
@@ -1205,6 +1332,9 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .residential-text p {
@@ -1213,6 +1343,9 @@ body {
     line-height: 1.6;
     margin-bottom: 2.5rem;
     opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .residential-buttons {
@@ -1231,6 +1364,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(44, 29, 74, 0.15);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .outline-button:hover {
@@ -1264,6 +1400,9 @@ body {
     color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .residential-benefits .benefit-card p {
@@ -1273,6 +1412,9 @@ body {
     line-height: 1.4;
     margin: 0;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Responsive */
@@ -1474,6 +1616,9 @@ body {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .speech-bubble::after {
@@ -1830,6 +1975,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
 }
 
 .solution-content .outline-button:hover {
@@ -1869,6 +2017,9 @@ body {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .hero-buttons {
@@ -2118,6 +2269,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .hero-tab i {
@@ -2140,4 +2292,87 @@ body {
     .hero-tab {
         width: 80%;
     }
+} 
+
+/* Suavizar bordes de imágenes */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Suavizar bordes de botones y elementos con bordes redondeados */
+.outline-button,
+.cta-button,
+.cta-button-purple,
+.quote-button,
+.benefit-card,
+.solution-card,
+.hero-tab {
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Mejorar la suavidad de las transiciones */
+.outline-button,
+.cta-button,
+.cta-button-purple,
+.quote-button,
+.benefit-card,
+.solution-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Suavizar texto en títulos */
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+/* Mejora para párrafos */
+p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.01em;
+}
+
+/* Mejora para enlaces y botones */
+a, button, .nav-links a, .footer-links a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    font-weight: 500;
+}
+
+/* Mejora para textos pequeños */
+small, .small-text {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+}
+
+/* Mejora para números y datos */
+.stats-grid h3, 
+.pricing-numbers, 
+.counter {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}
+
+/* Mejora para textos en fondos oscuros */
+.hero-section, 
+.services-hero, 
+.footer {
+    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+    font-smooth: always;
 } 
