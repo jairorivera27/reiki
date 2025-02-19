@@ -183,12 +183,15 @@
                 `*Ciudad:* ${ciudad}%0A` +
                 `*Mensaje:* ${mensaje}`;
             
-            // Crear el enlace de WhatsApp y redirigir
+            // Crear el enlace de WhatsApp y abrirlo en una nueva pestaña
             const urlWhatsApp = `https://wa.me/573245737413?text=${mensajeWhatsApp}`;
             window.open(urlWhatsApp, '_blank');
             
             // Limpiar el formulario
             document.getElementById('contactForm').reset();
+            
+            // Redirigir a la página de confirmación
+            window.location.href = 'confirmacion.html';
         }
     </script>
 
@@ -218,7 +221,7 @@
                         Opción 2: Ventas<br>
                         Opción 3: Soporte al cliente
                     </p>
-                    <a href="tel:+576016659652" style="
+                    <a href="tel:+573107168747" style="
                         display: block;
                         color: #2c1d4a;
                         font-weight: bold;
