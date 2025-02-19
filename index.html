@@ -54,7 +54,7 @@
                     </ul>
                 </li>
                 <li><a href="calculadora/index.html">Calculadora</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
             <div class="nav-buttons">
@@ -286,18 +286,18 @@
                 <h3>COMUNÍCATE CON NOSOTROS<br></h3>
                 <div class="contact-form">
                     <h4>Contáctanos</h4>
-                    <form id="contactForm">
+                    <form id="contactForm" onsubmit="enviarWhatsApp(event)">
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre y Apellido" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Correo Electrónico" required>
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Celular" required>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Celular" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Mensaje" required></textarea>
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="submit-button">Enviar</button>
                     </form>
@@ -341,11 +341,13 @@
 
                 <!-- Blog -->
                 <div class="footer-blog">
-                    <h3>Blog</h3>
+                    <h3>Blog y Enlaces Útiles</h3>
                     <ul>
-                        <li><a href="#">Instalación de paneles solares: cómo funciona y componentes principales</a></li>
-                        <li><a href="#">El lío de los cobros adicionales por Energías Reactivas en el país</a></li>
-                        <li><a href="#">Autogeneradores de energía con paneles solares</a></li>
+                        <li><a href="blog.html#instalacion">Instalación de paneles solares: guía completa</a></li>
+                        <li><a href="blog.html#beneficios">Beneficios de la energía solar fotovoltaica</a></li>
+                        <li><a href="blog.html#consumo">Cómo calcular tu consumo energético</a></li>
+                        <li><a href="blog.html#mantenimiento">Mantenimiento de sistemas solares</a></li>
+                        <li><a href="blog.html#faq">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
             </div>
@@ -466,6 +468,33 @@
                 avatarVideo.muted = true; // Silenciar el audio
             });
         });
+
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Crear el mensaje para WhatsApp
+            const mensajeWhatsApp = `¡Hola! Te contacto desde el formulario web:%0A%0A` +
+                `*Nombre:* ${nombre}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Teléfono:* ${telefono}%0A` +
+                `*Mensaje:* ${mensaje}`;
+            
+            // Crear el enlace de WhatsApp y abrirlo en una nueva pestaña
+            const urlWhatsApp = `https://wa.me/573245737413?text=${mensajeWhatsApp}`;
+            window.open(urlWhatsApp, '_blank');
+            
+            // Limpiar el formulario
+            document.getElementById('contactForm').reset();
+            
+            // Redirigir a la página de confirmación
+            window.location.href = 'confirmacion.html';
+        }
     </script>
 
     <!-- Botón flotante de WhatsApp -->

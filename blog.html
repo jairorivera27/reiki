@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Reiki Energía Solar</title>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para el blog */
+        .blog-hero {
+            background: linear-gradient(rgba(44, 29, 74, 0.8), rgba(44, 29, 74, 0.8)),
+                        url('blog-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            color: #e0bd1a;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            color: #2c1d4a;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .blog-sidebar {
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .blog-search {
+            margin-bottom: 2rem;
+        }
+
+        .blog-search input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .blog-categories {
+            margin-bottom: 2rem;
+        }
+
+        .blog-categories h3 {
+            color: #2c1d4a;
+            margin-bottom: 1rem;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .category-list a:hover {
+            color: #e0bd1a;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra superior de contacto -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+573245737413"><i class="fas fa-phone"></i> +57 324 573 7413</a>
+                <a href="mailto:comercial@reikisolar.energy"><i class="fas fa-envelope"></i> comercial@reikisolar.energy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo_blanco.png" alt="Reiki Energía Solar" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="servicios.html">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="servicios.html">Energía Solar Hogar</a></li>
+                        <li><a href="empresas.html">Energía Solar Empresas</a></li>
+                        <li><a href="soluciones-moviles.html">Energía Solar Móvil</a></li>
+                        <li><a href="servicios.html#eficiencia">Eficiencia Energética</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shop.html">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="shop-luminarias.html">Luminarias Solares</a></li>
+                        <li><a href="shop-kits.html">Kits Solares</a></li>
+                        <li><a href="shop-equipos.html">Equipos de Energía Fotovoltaica</a></li>
+                    </ul>
+                </li>
+                <li><a href="calculadora/index.html">Calculadora</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="https://wa.me/573245737413" target="_blank" class="quote-button" style="text-decoration: none;">Cotiza Ya</a>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Blog de Energía Solar</h1>
+            <p>Mantente informado sobre las últimas tendencias en energía solar</p>
+        </div>
+    </section>
+
+    <!-- Contenido del Blog -->
+    <section class="blog-content-section">
+        <div class="container" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; padding: 4rem 0;">
+            <!-- Grid de Artículos -->
+            <div class="blog-grid">
+                <!-- Artículo 1 -->
+                <article class="blog-card">
+                    <img src="blog/instalacion-paneles.jpg" alt="Instalación de Paneles Solares" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Guías</span>
+                        <h2 class="blog-title">Instalación de paneles solares: cómo funciona y componentes principales</h2>
+                        <p class="blog-excerpt">Descubre todo lo que necesitas saber sobre la instalación de paneles solares y sus componentes esenciales.</p>
+                        <div class="blog-meta">
+                            <span>5 min de lectura</span>
+                            <span>Enero 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="blog-card">
+                    <img src="blog/energia-reactiva.jpg" alt="Energía Reactiva" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Noticias</span>
+                        <h2 class="blog-title">El lío de los cobros adicionales por Energías Reactivas en el país</h2>
+                        <p class="blog-excerpt">Análisis detallado sobre la situación actual de los cobros por energía reactiva en Colombia.</p>
+                        <div class="blog-meta">
+                            <span>4 min de lectura</span>
+                            <span>Enero 10, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="blog-card">
+                    <img src="blog/autogeneracion.jpg" alt="Autogeneración Solar" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Tecnología</span>
+                        <h2 class="blog-title">Autogeneradores de energía con paneles solares</h2>
+                        <p class="blog-excerpt">Todo sobre cómo convertirte en un autogenerador de energía utilizando paneles solares.</p>
+                        <div class="blog-meta">
+                            <span>6 min de lectura</span>
+                            <span>Enero 5, 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Buscador -->
+                <div class="blog-search">
+                    <input type="text" placeholder="Buscar artículos...">
+                </div>
+
+                <!-- Categorías -->
+                <div class="blog-categories">
+                    <h3>Categorías</h3>
+                    <ul class="category-list">
+                        <li><a href="#guias">Guías y Tutoriales</a></li>
+                        <li><a href="#noticias">Noticias del Sector</a></li>
+                        <li><a href="#tecnologia">Tecnología Solar</a></li>
+                        <li><a href="#casos">Casos de Éxito</a></li>
+                        <li><a href="#eficiencia">Eficiencia Energética</a></li>
+                    </ul>
+                </div>
+
+                <!-- Artículos Populares -->
+                <div class="popular-posts">
+                    <h3>Artículos Populares</h3>
+                    <ul class="category-list">
+                        <li><a href="#post1">Beneficios de la energía solar en el hogar</a></li>
+                        <li><a href="#post2">Mantenimiento de paneles solares</a></li>
+                        <li><a href="#post3">Ahorro energético: tips prácticos</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo y eslogan -->
+                <div class="footer-brand">
+                    <img src="logo_blanco.png" alt="Reiki Energía Solar" class="footer-logo">
+                    <p class="footer-description">Transformamos la energía del sol en soluciones sostenibles para tu hogar y empresa.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/reikienergiasolar" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reikienergiasolar/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-contact">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Servicio al cliente: +57 324 573 7413</li>
+                        <li><i class="fas fa-envelope"></i> comercial@reikisolar.energy</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia Carrera 66 #93-76</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 6:00 PM</li>
+                        <li><i class="fas fa-clock"></i> Sábados: 8:00 AM - 2:00 PM</li>
+                    </ul>
+                    <a href="https://wa.me/573245737413" target="_blank" class="quote-button">Solicita ya tu cotización</a>
+                </div>
+
+                <!-- Blog -->
+                <div class="footer-blog">
+                    <h3>Blog y Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="blog.html#instalacion">Instalación de paneles solares: guía completa</a></li>
+                        <li><a href="blog.html#beneficios">Beneficios de la energía solar fotovoltaica</a></li>
+                        <li><a href="blog.html#consumo">Cómo calcular tu consumo energético</a></li>
+                        <li><a href="blog.html#mantenimiento">Mantenimiento de sistemas solares</a></li>
+                        <li><a href="blog.html#faq">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright y Enlaces Legales -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+                <p class="copyright">Copyright © 2024 Reiki Energía Solar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Script para la navegación móvil
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html> 
