@@ -97,7 +97,7 @@
         background: linear-gradient(rgba(44, 29, 74, 0.4), rgba(44, 29, 74, 0.4)), url('7040278-uhd_4096_1974_30fps.jpg');
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         color: white;">
@@ -114,43 +114,75 @@
             z-index: 2;
             text-align: center;
             width: 100%;
-            transform: translateY(-20vh);">
+            transform: translateY(0);">
             <h1 style="font-size: 4rem; font-weight: bold; margin-bottom: 0.5rem; line-height: 1.1;">NO PAGUES MÁS ENERGÍA ELÉCTRICA</h1>
             <p style="font-size: 1.8rem; margin-bottom: 2rem; line-height: 1.2;">Con energía solar disminuyes el gasto de tus servicios públicos</p>
             <button class="cta-button" style="position: relative; z-index: 3;">Cotiza Gratis Ahora</button>
         </div>
-        <div class="hero-stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3 style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);">100%</h3>
-                        <p>de ahorro en tu factura de energía</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);">25</h3>
-                        <p>años de vida útil de tu sistema</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-leaf stat-icon" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);"></i>
-                        <p>Sostenibilidad ambiental</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-bolt stat-icon" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);"></i>
-                        <p>Eficiencia energética</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Nuevo bloque de servicios -->
-    <section class="services-banner">
-        <div class="container">
-            <div class="services-content">
+    <section class="services-banner" style="height: 90vh;">
+        <div class="container" style="height: 100%;">
+            <div class="services-content" style="
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem 0;">
                 <h2>Ahorra al máximo en tu factura<br>de energía eléctrica</h3>
                 <h2 class="services-subtitle">Con nuestras soluciones de energía solar</h1>
                 <h2 class="services-subtitle">diseñadas para tu hogar, industria o proyecto</h1>
-                <a href="servicios.html" class="cta-button-purple" style="text-decoration: none; display: inline-block;">Conoce más</a>
+                <a href="servicios.html" class="cta-button-purple" style="
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 1rem 4rem;
+                    min-width: 100px;
+                    margin: 1.5rem 0;
+                    font-size: 1.2rem;">Conoce más</a>
+                
+                <!-- Indicadores de Beneficios -->
+                <div style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                    text-align: center;">
+                    
+                    <div class="benefit-item">
+                        <h3 style="
+                            font-size: clamp(2.5rem, 6vw, 3.5rem);
+                            color: #2c1d4a;
+                            margin-bottom: 0.5rem;">100%</h3>
+                        <p style="color: #2c1d4a;">de ahorro en tu factura de energía</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <h3 style="
+                            font-size: clamp(2.5rem, 6vw, 3.5rem);
+                            color: #2c1d4a;
+                            margin-bottom: 0.5rem;">25</h3>
+                        <p style="color: #2c1d4a;">años de vida útil de tu sistema</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <i class="fas fa-leaf" style="
+                            font-size: clamp(2.5rem, 6vw, 3.5rem);
+                            color: #2c1d4a;
+                            margin-bottom: 0.5rem;
+                            display: block;"></i>
+                        <p style="color: #2c1d4a;">Sostenibilidad ambiental</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <i class="fas fa-bolt" style="
+                            font-size: clamp(2.5rem, 6vw, 3.5rem);
+                            color: #2c1d4a;
+                            margin-bottom: 0.5rem;
+                            display: block;"></i>
+                        <p style="color: #2c1d4a;">Eficiencia energética</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
