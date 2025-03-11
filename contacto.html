@@ -94,32 +94,45 @@
 
     <!-- Hero Section -->
     <section class="hero-section" style="
-        background: linear-gradient(rgba(44, 29, 74, 0.4), rgba(44, 29, 74, 0.4)),
+        background: linear-gradient(rgba(44, 29, 74, 0.7), rgba(44, 29, 74, 0.7)),
         url('contacto-hero.jpg');
         background-size: cover;
         background-position: center;
-        padding: 6rem 0;
+        padding: 8rem 0;
         color: white;
-        text-align: center;">
+        text-align: center;
+        position: relative;
+        z-index: 1;">
         <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Centro de ayuda</h1>
-            <p style="font-size: 1.2rem;">Estamos aquí para ayudarte</p>
+            <h1 style="
+                font-size: clamp(2.5rem, 8vw, 3.5rem);
+                margin-bottom: 1.5rem;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                Centro de ayuda
+            </h1>
+            <p style="
+                font-size: clamp(1.1rem, 4vw, 1.3rem);
+                max-width: 600px;
+                margin: 0 auto;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+                Estamos aquí para ayudarte
+            </p>
         </div>
     </section>
 
     <!-- Formulario de Contacto -->
     <section class="contact-form" style="
         background: white;
-        padding: 4rem 0;
-        margin-top: -4rem;
+        padding: 2rem 1rem;
+        margin-top: -2rem;
         position: relative;
-        z-index: 1;">
+        z-index: 2;">
         <div class="container">
             <div class="form-container" style="
                 max-width: 800px;
                 margin: 0 auto;
                 background: white;
-                padding: 2rem;
+                padding: 1.5rem;
                 border-radius: 15px;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 <form id="contactForm" style="display: grid; gap: 1.5rem;" onsubmit="enviarWhatsApp(event)">
@@ -224,18 +237,101 @@
         }
     </script>
 
+    <!-- Banners de Redes Sociales -->
+    <div class="social-banners" style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;">
+        
+        <!-- Banner de Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61551829530814" target="_blank" class="social-banner" style="
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;">
+            <div style="text-align: center;">
+                <i class="fab fa-facebook" style="
+                    font-size: 3rem;
+                    color: #1877f2;
+                    margin-bottom: 1rem;"></i>
+                <h5 style="margin-bottom: 1rem;">Síguenos en Facebook</h5>
+                <p style="color: #666;">Mantente al día con nuestras últimas novedades y proyectos</p>
+            </div>
+        </a>
+
+        <!-- Banner de Instagram -->
+        <a href="https://www.instagram.com/reikiener/" target="_blank" class="social-banner" style="
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;">
+            <div style="text-align: center;">
+                <i class="fab fa-instagram" style="
+                    font-size: 3rem;
+                    color: #e4405f;
+                    margin-bottom: 1rem;"></i>
+                <h5 style="margin-bottom: 1rem;">Síguenos en Instagram</h5>
+                <p style="color: #666;">Descubre nuestras instalaciones y testimonios</p>
+            </div>
+        </a>
+
+        <!-- Banner de LinkedIn -->
+        <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-banner" style="
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;">
+            <div style="text-align: center;">
+                <i class="fab fa-linkedin" style="
+                    font-size: 3rem;
+                    color: #0a66c2;
+                    margin-bottom: 1rem;"></i>
+                <h5 style="margin-bottom: 1rem;">Síguenos en LinkedIn</h5>
+                <p style="color: #666;">Conéctate con nosotros profesionalmente</p>
+            </div>
+        </a>
+    </div>
+
+    <style>
+        .social-banner:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
     <!-- Centro de Ayuda -->
-    <section class="help-center" style="padding: 4rem 0;">
+    <section class="help-center" style="padding: 3rem 1rem;">
         <div class="container">
-            <h1 style="text-align: center; margin-bottom: 2rem;">Centro de ayuda</h1>
-            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">¿En qué podemos ayudarte?</h2>
+            <h1 style="
+                text-align: center;
+                margin-bottom: 1.5rem;
+                font-size: clamp(1.8rem, 5vw, 2.5rem);">
+                Centro de ayuda
+            </h1>
+            <h2 style="
+                text-align: center;
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
+                margin-bottom: 2rem;">
+                ¿En qué podemos ayudarte?
+            </h2>
 
             <!-- Tarjetas de Contacto -->
             <div class="contact-cards" style="
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
-                margin-bottom: 4rem;">
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+                margin-bottom: 3rem;">
                 
                 <!-- Teléfono -->
                 <div class="contact-card" style="
@@ -356,8 +452,8 @@
                     <img src="logo_blanco.png" alt="Reiki Energía Solar" class="footer-logo">
                     <div class="social-links">
                         <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/reikienergiasolar" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/reikienergiasolar/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61551829530814" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reikiener/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -397,8 +493,87 @@
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank" id="whatsappFloat">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- WhatsApp Popup -->
+    <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+            <button class="whatsapp-popup-close" onclick="closeWhatsAppPopup()">×</button>
+        </div>
+        <div class="whatsapp-popup-body">
+            <div class="whatsapp-message">
+                Hola ¿Necesitas asesoría?
+            </div>
+        </div>
+        <div class="whatsapp-popup-footer">
+            <form onsubmit="enviarMensajeWhatsApp(event)">
+                <input 
+                    type="text" 
+                    class="whatsapp-input" 
+                    id="whatsappInput" 
+                    placeholder="Escribe tu mensaje..."
+                >
+                <button type="submit" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Script para el popup de WhatsApp
+        function showWhatsAppPopup() {
+            const popup = document.getElementById('whatsappPopup');
+            popup.classList.add('show');
+            document.getElementById('whatsappInput').focus();
+        }
+
+        function closeWhatsAppPopup() {
+            const popup = document.getElementById('whatsappPopup');
+            popup.classList.remove('show');
+        }
+
+        function enviarMensajeWhatsApp(event) {
+            event.preventDefault();
+            const mensaje = document.getElementById('whatsappInput').value.trim();
+            if (!mensaje) return;
+            
+            const mensajeFormateado = encodeURIComponent(mensaje);
+            const urlWhatsApp = `https://wa.me/573245737413?text=${mensajeFormateado}`;
+            window.open(urlWhatsApp, '_blank');
+            document.getElementById('whatsappInput').value = '';
+        }
+
+        // Mostrar el popup después de 7 segundos
+        setTimeout(showWhatsAppPopup, 7000);
+
+        // Mostrar/ocultar el popup al pasar el cursor por el icono
+        const whatsappFloat = document.getElementById('whatsappFloat');
+        whatsappFloat.addEventListener('mouseenter', () => {
+            showWhatsAppPopup();
+        });
+
+        // Cerrar el popup al hacer clic fuera de él
+        document.addEventListener('click', (e) => {
+            const popup = document.getElementById('whatsappPopup');
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            
+            if (!popup.contains(e.target) && !whatsappFloat.contains(e.target)) {
+                closeWhatsAppPopup();
+            }
+        });
+
+        // Manejar el envío con Enter
+        document.getElementById('whatsappInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                enviarMensajeWhatsApp(e);
+            }
+        });
+    </script>
 </body>
 </html> 

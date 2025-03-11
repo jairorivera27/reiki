@@ -251,8 +251,8 @@
                     <p class="footer-description">Transformamos la energía del sol en soluciones sostenibles para tu hogar y empresa.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/company/reiki-energia-solar/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/reikienergiasolar" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/reikienergiasolar/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61551829530814" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reikiener/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -297,9 +297,36 @@
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/573245737413" class="whatsapp-float" target="_blank" id="whatsappFloat">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- WhatsApp Popup -->
+    <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+            <button class="whatsapp-popup-close" onclick="closeWhatsAppPopup()">×</button>
+        </div>
+        <div class="whatsapp-popup-body">
+            <div class="whatsapp-message">
+                Hola ¿Necesitas asesoría?
+            </div>
+        </div>
+        <div class="whatsapp-popup-footer">
+            <form onsubmit="enviarMensajeWhatsApp(event)">
+                <input 
+                    type="text" 
+                    class="whatsapp-input" 
+                    id="whatsappInput" 
+                    placeholder="Escribe tu mensaje..."
+                >
+                <button type="submit" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script>
         // Script para la navegación móvil
@@ -317,6 +344,56 @@
                 navToggle.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        // Script para el popup de WhatsApp
+        function showWhatsAppPopup() {
+            const popup = document.getElementById('whatsappPopup');
+            popup.classList.add('show');
+            document.getElementById('whatsappInput').focus();
+        }
+
+        function closeWhatsAppPopup() {
+            const popup = document.getElementById('whatsappPopup');
+            popup.classList.remove('show');
+        }
+
+        function enviarMensajeWhatsApp(event) {
+            event.preventDefault();
+            const mensaje = document.getElementById('whatsappInput').value.trim();
+            if (!mensaje) return;
+            
+            const mensajeFormateado = encodeURIComponent(mensaje);
+            const urlWhatsApp = `https://wa.me/573245737413?text=${mensajeFormateado}`;
+            window.open(urlWhatsApp, '_blank');
+            document.getElementById('whatsappInput').value = '';
+        }
+
+        // Mostrar el popup después de 7 segundos
+        setTimeout(showWhatsAppPopup, 7000);
+
+        // Mostrar/ocultar el popup al pasar el cursor por el icono
+        const whatsappFloat = document.getElementById('whatsappFloat');
+        whatsappFloat.addEventListener('mouseenter', () => {
+            showWhatsAppPopup();
+        });
+
+        // Cerrar el popup al hacer clic fuera de él
+        document.addEventListener('click', (e) => {
+            const popup = document.getElementById('whatsappPopup');
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            
+            if (!popup.contains(e.target) && !whatsappFloat.contains(e.target)) {
+                closeWhatsAppPopup();
+            }
+        });
+
+        // Manejar el envío con Enter
+        document.getElementById('whatsappInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                enviarMensajeWhatsApp(e);
+            }
         });
     </script>
 </body>

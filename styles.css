@@ -2473,3 +2473,138 @@ small, .small-text {
         display: none;
     }
 } 
+
+/* Estilos para el popup de WhatsApp */
+.whatsapp-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 300px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.whatsapp-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.whatsapp-popup-header {
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-popup-header i.fab.fa-whatsapp {
+    font-size: 24px;
+    color: white;
+}
+
+.whatsapp-popup-header span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.whatsapp-popup-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+}
+
+.whatsapp-popup-body {
+    padding: 20px;
+    background: #E8ECEF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.whatsapp-message {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 0;
+    display: inline-block;
+    max-width: 85%;
+}
+
+.whatsapp-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    resize: none;
+    min-height: 45px;
+    max-height: 100px;
+}
+
+.whatsapp-input:focus {
+    border-color: #25D366;
+}
+
+.whatsapp-input::placeholder {
+    color: #999;
+}
+
+.whatsapp-popup-footer {
+    padding: 15px 20px;
+    background: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.whatsapp-popup-footer form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.whatsapp-popup-footer .whatsapp-input {
+    flex: 1;
+    margin: 0;
+    min-height: 40px;
+    padding: 8px 15px;
+}
+
+.whatsapp-popup-footer .send-button {
+    background: #25D366;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.whatsapp-popup-footer .send-button:hover {
+    background: #1ea952;
+}
+
+.whatsapp-popup-footer .send-button i {
+    font-size: 18px;
+    transform: rotate(45deg);
+} 
